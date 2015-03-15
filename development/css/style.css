@@ -1,0 +1,19 @@
+.bgImg{
+	height: 400px;
+	width: 1000px;
+}
+
+#slides_control > div{
+  height: 300px;
+}
+img{
+  margin:auto;
+  width: 500px;
+}
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ServicingMadeEasy",
+  "version": "0.0.1",
+  "description": "It will help you to find the right people for servicing of your daily used products ",
+  "main": "index.html",
+  "keywords": [
+    "Easy",
+    "Servicing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShivamLatawa/angularApps.git"
+  },
+  "author": "Shivam Latawa",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-util": "^2.2.20",
+    "gulp-webserver": "^0.8.8"
+  }
+}

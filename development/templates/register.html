@@ -1,0 +1,32 @@
+<section ng-controller="registerController">
+	<div class="container">
+		<a href="" class="clearfix" ng-click="toggleRegisterModal()" class="">Register New User</a>
+
+		<modal title="Registration form" visible="showRegisterModal">
+		    <form role="form" name='registrationForm' novalidate>
+
+				<div class="form-group">
+			        <label for="userName">Username</label>
+			        <input type="text" name="name" class="form-control" id="userName" placeholder="Enter your name"
+			        ng-model="registerUser.name"/>
+			        <span ng-show="registrationForm.name.$invalid && registrationForm.name.$touched">It cannot be empty</span>
+		      	</div>
+
+		    	<div class="form-group">
+			        <label for="email">Email address</label>
+			        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email"
+			        ng-model="registerUser.email"/>
+			        <span ng-show="registrationForm.email.$invalid && registrationForm.email.$touched">Must be a valid email</span>
+		      	</div>
+		      	<div class="form-group">
+			        <label for="password">Password</label>
+			        <input type="password" name="password" class="form-control" id="password" placeholder="Password"
+			        ng-model="registerUser.password"/>
+		      	</div>
+		        <button type="submit" ng-disabled="registrationForm.$invalid" ng-click="addUser(registerUser)" class="btn btn-default">Register</button>
+		    </form>
+		</modal>
+
+	</div>
+
+</section>

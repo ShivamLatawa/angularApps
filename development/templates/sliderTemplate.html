@@ -1,0 +1,12 @@
+<script type="text/ng-template" id="/sliderTemplate.html">
+    <div class="flexslider">
+        <ul class="slides">
+            <li ng-repeat="x in items">
+                <img ng-src="{{x}}" />
+            </li>
+        </ul>
+    </div>
+</script>
+<div ng-controller="mainCtrl">
+	<div slider items="arr"></div>
+</div>
