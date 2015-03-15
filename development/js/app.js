@@ -13,6 +13,14 @@ sme.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'templates/service.html',
       controller:  ''
     }).
+    when('/basicInfo', {
+      templateUrl: 'templates/basicInfo.html',
+      controller:  ''
+    }).
+    when('/schedule', {
+      templateUrl: 'templates/schedule.html',
+      controller:  ''
+    }).
     otherwise({
       redirectTo: '/home'
     });
