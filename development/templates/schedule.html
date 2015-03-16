@@ -1,1 +1,60 @@
-<h2>Schedule</h2>
+<section class="schedulePage">
+
+	<h2>Choose your Day and Time</h2>
+	<div ng-controller="DatepickerDemoCtrl">
+
+
+	    <h4>Pick a Day</h4>
+	    <div style="display:inline-block; min-height:290px;">
+	        <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+	    </div>
+
+	    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+	</div>
+
+	<div>
+		<h4>Pick a Time</h4>
+		<div>
+			<select name="" id="" class="dropDown">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="customerInfo">
+		<table border="2">
+			<tr width="100px">
+				<th>erer</th>
+				<th>erer</th>
+				<th>erfer</th>
+			</tr>
+
+			<tbody>
+				<tr>
+					<td>erge</td>
+					<td>erger</td>
+					<td>ergergS</td>
+				</tr>
+
+				<tr>
+					<td>erge</td>
+					<td>erger</td>
+					<td>ergergS</td>
+				</tr>
+
+				<tr>
+					<td>erge</td>
+					<td>erger</td>
+					<td>ergergS</td>
+				</tr>
+			</tbody>
+  		</table>
+	</div>
+
+</section>
