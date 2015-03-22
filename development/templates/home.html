@@ -1,45 +1,77 @@
 <section class="homepage">
-	<img src="" alt="logo">
-	<h1>Servicing Made Easy</h1>
-	<div  ng-include src="'templates/login.html'"></div>
-	<div ng-include src="'templates/register.html'"></div>
-	<hr>
-	<div class="container">
-		<div class="row col-lg-10">
-			<div ng-controller="CarouselCtrl" id="slides_control">
-			    <div>
-			      <carousel interval="myInterval">
-			        <slide ng-repeat="slide in slides" active="slide.active">
-			          <img ng-src="{{slide.image}}">
-			          <div class="carousel-caption">
-			            <h4>Slide {{$index+1}}</h4>
-			          </div>
-			        </slide>
-			      </carousel>
-			    </div>
-		  	</div>
-		</div>
-			<article>
-				<h3>Get your products serviced easily and quickly</h3>
-			</article>
+	<div class="page-header row">
+		<img src="" class="col-lg-1" alt="logo">
+		<h3 class="col-lg-8">Servicing Made Easy</h3>
+		<div  class="col-lg-1 loginTemplate" ng-include src="'templates/login.html'"></div>
+
+		<div  class="col-lg-1" ng-include src="'templates/register.html'"></div>
 	</div>
 
-	<section class="sidebar">
-		<div class="firstBar">
+	<div class="carousel">
+		<div ng-controller="CarouselCtrl" id="slides_control">
+		    <div class="carouselContainer">
+		      <carousel interval="myInterval">
+		        <slide ng-repeat="slide in slides" active="slide.active">
+		          <img ng-src="{{slide.image}}" style="width:1270px;height:450px;">
+		          <div class="carousel-caption">
+		            <h4 class="slideText">{{slide.text}}</h4>
+		          </div>
+		        </slide>
+		      </carousel>
+		    </div>
+	  	</div>
+	</div>
+</section>
+	<section class="sidebar row">
+		<div class="bar col-lg-3">
 			<h2>Lorem Ipsum</h2>
-			<p>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
+			<p> Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
 		</div>
 
-		<div class="secondBar">
+		<div class="bar col-lg-3">
 			<h2>Lorem Ipsum</h2>
-			<p>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
+			<p>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
 		</div>
 
-		<div class="thirdBar">
+		<div class="bar col-lg-3">
 			<h2>Lorem Ipsum</h2>
-			<p>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
+			<p>Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
 		</div>
 	</section>
 
-</section>
+	<section class="infoAboutSite">
+		<h3 class="infoHead">Its as simple as get , set & go</h3>
+		<div class="steps row">
+
+			<div class="col-lg-3 bar">
+				<img src="" alt="">
+				<h4>Register</h4>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			</div>
+
+			<div class="col-lg-3 bar">
+				<img src="" alt="">
+				<h4>Book</h4>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			</div>
+
+			<div class="col-lg-3 bar">
+				<img src="" alt="">
+				<h4>Sit Back and Relax</h4>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+			</div>
+		</div>
+
+		<div class="facebookLike">
+
+		</div>
+	</section>
+
+	<footer>
+		<div>
+			<h5>Copyright @2015</h5>
+		</div>
+	</footer>
+
+
 
