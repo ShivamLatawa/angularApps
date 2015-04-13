@@ -1,60 +1,49 @@
 <section class="schedulePage">
 
-	<h2>Choose your Day and Time</h2>
-	<div ng-controller="DatepickerDemoCtrl">
+	<h2 class="commonPageHeader">Choose your Day and Time</h2>
+	<div class="scheduleDayTime row">
+		<div ng-controller="DatepickerDemoCtrl" class="col-lg-6">
+		    <h4>Day of your choice</h4>
+		    <div style="display:inline-block; min-height:290px;">
+		        <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+		    </div>
 
-
-	    <h4>Pick a Day</h4>
-	    <div style="display:inline-block; min-height:290px;">
-	        <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
-	    </div>
-
-	    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
-	</div>
-
-	<div>
-		<h4>Pick a Time</h4>
-		<div>
-			<select name="" id="" class="dropDown">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-			</select>
+		    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
 		</div>
+
+		<div ng-controller="TimepickerDemoCtrl" class="col-lg-5">
+			<h4>Time of your choice</h4>
+			<timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+
+			<pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+
+		</div>
+
 	</div>
 
-	<div class="customerInfo">
-		<table border="2">
-			<tr width="100px">
-				<th>erer</th>
-				<th>erer</th>
-				<th>erfer</th>
-			</tr>
+	<h4 class="infoEntered">Please verify the details provided below :</h4>
 
-			<tbody>
-				<tr>
-					<td>erge</td>
-					<td>erger</td>
-					<td>ergergS</td>
-				</tr>
+	<table st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Address</th>
+		<th>City</th>
+		<th>Services needed</th>
+		<th>Contact No.</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in rowCollection">
+		<td>{{row.name}}</td>
+		<td>{{row.address}}</td>
+		<td>{{row.city}}</td>
+		<td>{{row.services}}</td>
+		<td>{{row.contact}}</td>
+	</tr>
+	</tbody>
+</table>
 
-				<tr>
-					<td>erge</td>
-					<td>erger</td>
-					<td>ergergS</td>
-				</tr>
-
-				<tr>
-					<td>erge</td>
-					<td>erger</td>
-					<td>ergergS</td>
-				</tr>
-			</tbody>
-  		</table>
-	</div>
+<button type="submit" value="" class="btn btn-default bookAppointment">Book Appointment</button>
 
 </section>

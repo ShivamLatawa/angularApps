@@ -1,7 +1,7 @@
 var sme = angular.module('sme',['ngRoute','firebase','appControllers']);
 sme.constant('FIREBASE_URL','https://servicingme.firebaseio.com');
 
-var appControllers = angular.module('appControllers',['firebase','ui.bootstrap']);
+var appControllers = angular.module('appControllers',['firebase','ui.bootstrap','ngCookies']);
 
 sme.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -11,15 +11,7 @@ sme.config(['$routeProvider', function($routeProvider) {
     }).
     when('/services', {
       templateUrl: 'templates/service.html',
-      controller:  ''
-    }).
-    when('/basicInfo', {
-      templateUrl: 'templates/basicInfo.html',
-      controller:  ''
-    }).
-    when('/schedule', {
-      templateUrl: 'templates/schedule.html',
-      controller:  ''
+      controller:  'ServicesController'
     }).
     otherwise({
       redirectTo: '/home'

@@ -1,44 +1,57 @@
 <div class="basicInfoPage">
 	<header>
-		<h2>Enter Contact info</h2>
+		<h3 class="commonPageHeader">Enter Contact info</h3>
 	</header>
 
 	<div class="addressSection">
-		<h2>Address</h2>
+		<h2 class="text-danger">Address</h2><br>
 
-		<input type="text" name="line1" placeholder="Address Line1">
+		<form role="form" name="basicInfoForm" novalidate>
+	    	<div class="form-group">
+		        <input type="text" class="form-control" name="line1"  placeholder="Address Line1" >
+	      	</div>
 
-		<input type="text" name="line2" placeholder="Address Line2">
+			<div class="form-group">
+		        <input type="text" class="form-control" name="line2"  placeholder="Address Line2" >
+	      	</div>
 
-		<input type="text" name="city" placeholder="City">
+			<div class="form-group">
+		        <input type="text" class="form-control" name="city"  placeholder="City" >
+	      	</div>
 
-		<input type="text" name="state" placeholder="State">
+			<div class="form-group">
+		        <input type="text" class="form-control" name="state"  placeholder="State" >
+	      	</div>
 
-		<input type="text" name="zipcode" placeholder="Zipcode">
+			<div class="form-group">
+		        <input type="text" class="form-control" name="zipcode"  placeholder="Zipcode" >
+	      	</div>
 	</div>
+
 
 	<div class="infoToContact">
 		<form role="form" name="contactInfo" novalidate>
-
+				<h4 class="text-danger">Please provide the following information</h4>
 				<div>
 		    		<label for="name">Name</label>
-			        <input type="text"  name="name" id="name" placeholder="Enter Name">
-					<br><br>
+			        <input type="text"  name="name" id="name" class="form-control" placeholder="Enter Name">
+
 		      	</div>
 
 		    	<div>
 			        <label for="email">Email address</label>
-			        <input type="email"  name="email" id="email" placeholder="Enter Email">
-					<br><br>
+			        <input type="email"  name="email" id="email" class="form-control" placeholder="Enter Email">
+
 		      	</div>
 
 		      	<div>
 			        <label for="phone">Phone no.</label>
-			        <input type="text"  name="phone" id="phone" placeholder="Enter your contact number">
-					<br><br>
+			        <input type="text"  name="phone" id="phone" class="form-control" placeholder="Enter your contact number">
+			        <br><br>
+
 		      	</div>
 
-		        <a href="#/schedule" class="btn btn-default">Next</a>
+		        <a href="#/" class="btn btn-default">Next</a>
 		    </form>
 	</div>
 </div>

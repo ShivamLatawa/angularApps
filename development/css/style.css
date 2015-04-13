@@ -3,25 +3,30 @@ h1,h2,h3,div,header,.row{
 	padding: 0;
 }
 
-/* body{
-	width: 1270px;
-	margin: 0 30px;
-} */
-.page-header{
-	margin-top: 20px;
+body{
+	margin: 0 auto;
+	background-color:#f2dede;
 }
 
+.page-header{
+	margin-top: 20px;
+	height:40px;
+}
+
+.logo{
+	margin-top:5px;
+}
 .modal-dialog , .modal-backdrop{
 	z-index: 99;
 }
 
 .slideText{
-	color: white;
+	color: ;
 }
 
 .carousel{
 	height:450px;
-	width: 1330px;
+	width: 1362px;
 }
 
 #slides_control {
@@ -37,11 +42,10 @@ h1,h2,h3,div,header,.row{
 
 .loginTemplate{
 	width: 60px;
-	margin-left: 100px;
 }
 
 .sidebar{
-	margin-top: 50px;
+	margin-top: 100px;
 }
 .infoAboutSite{
 	background-color:#eb6864;
@@ -59,4 +63,57 @@ h1,h2,h3,div,header,.row{
 }
 .steps{
 	background-color:
+}
+
+.commonPageHeader{
+	margin-top:60px;
+	margin-bottom: 30px;
+}
+
+.commonPageHead{
+	margin-top: 20px;
+}
+
+.navbar{
+	margin-bottom: 0;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.commonPage{
+	width:70%;
+	margin: 0 auto;
+	overflow: auto;
+	background-color: #f2dede;
+}
+.basicInfoPage{
+	margin: 0 0 0 154px;
+}
+.logout{
+	margin-left: 50px;
+}
+.addressSection{
+	width: 80%;
+}
+
+.infoToContact{
+	width: 50%;
+}
+
+.infoText{
+	margin-top: 50px;
+}
+
+.itemsToBeServiced{
+	overflow: auto;
+}
+
+.nextBtn{
+	margin-left: 450px;
+	margin-top: 50px;
+}
+
+.bookAppointment{
+	margin-left: 400px;
+	margin-top: 20px;
 }

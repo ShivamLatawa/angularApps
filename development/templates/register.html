@@ -8,22 +8,23 @@
 				<div class="form-group">
 			        <label for="userName">Username</label>
 			        <input type="text" name="name" class="form-control" id="userName" placeholder="Enter your name"
-			        ng-model="registerUser.name"/>
+			        ng-model="newUser.username"/>
 			        <span ng-show="registrationForm.name.$invalid && registrationForm.name.$touched">It cannot be empty</span>
 		      	</div>
 
 		    	<div class="form-group">
 			        <label for="email">Email address</label>
 			        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email"
-			        ng-model="registerUser.email"/>
+			        ng-model="newUser.email"/>
 			        <span ng-show="registrationForm.email.$invalid && registrationForm.email.$touched">Must be a valid email</span>
 		      	</div>
 		      	<div class="form-group">
 			        <label for="password">Password</label>
 			        <input type="password" name="password" class="form-control" id="password" placeholder="Password"
-			        ng-model="registerUser.password"/>
+			        ng-model="newUser.password"/>
 		      	</div>
-		        <button type="submit" ng-disabled="registrationForm.$invalid" ng-click="addUser(registerUser)" class="btn btn-default">Register</button>
+		        <button type="submit" ng-disabled="registrationForm.$invalid" ng-click="registerUser(newUser)" class="btn btn-default">Register</button>
+		        <span ng-show="errorMsg" class="text-warning">{{errorMsg}}</span>
 		    </form>
 		</modal>
 

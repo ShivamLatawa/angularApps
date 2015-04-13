@@ -1,48 +1,28 @@
-<nav>
-	<div id ="siteIcon">
-		<img src="">
-		<h2>SME</h2>
-	</div>
+<section class="commonPage" ng-controller="ServicesController">
 
-	<div id="levels">
-		<a href=""><i>Level 1</i></a>
-		>
-		<a href=""><i>Level 2</i></a>
-		>
-		<a href=""><i>Level 3</i></a>
-		>
-		<a href=""><i>Level 4</i></a>
-	</div>
-</nav>
-
-<hr>
-
-<section id="mainServiceSection">
-	<h3>Tell us about the things you want to be serviced</h3>
-
-	<div id="itemsToBeServiced">
-		<div id="item1">
-			<img src="">
+	<nav class="navbar navbar-default navbar-fixed-top row">
+		<div class="col-lg-4 commonPageHead">
+			<img src="" class="col-lg-5" alt="logo">
+			<h3 class="col-lg-6">SME</h3>
 		</div>
+		<div class="levels col-lg-7 commonPageHead">
+			<a href="" ng-click= "displayBasicInfo()">Step1</a>
+			<span> > </span>
 
-		<div id="item2">
-			<img src="">
+			<a href="" ng-click= "displayServices()">Step2</a>
+			<span> > </span>
+
+			<a href="" ng-click= "displaySchedule()">Step3</a>
+
+			<a href="" class="logout text-success" ng-click="logout()">Logout</a>
+			<span>{{username}}</span>
 		</div>
+	</nav>
+	<section class="dynamic">
+		<div ng-include src="'templates/basicInfo.html'" ng-show = "basicInfoView"></div>
+		<div ng-include src="'templates/servicesAvailable.html'" ng-show = "servicesView"></div>
+		<div ng-include src="'templates/schedule.html'" ng-show = "scheduleView"></div>
+	</section>
 
-		<div id="item3">
-			<img src="">
-		</div>
 
-		<div id="item4">
-			<img src="">
-		</div>
-	</div>
-
-	<hr>
-
-	<div id="infoText">
-		Lorem ipsum dolor sit amet, magna tortor. Eros ut molestiae facilisis, phasellus tristique duis ac. Nascetur vivamus nullam placerat lacus, praesent sollicitudin. Parturient nulla dolor blandit erat potenti, tempor aliquam, tortor est non, accumsan ut mollis tellus nec vestibulum, eu quis vel ligula id. Donec fames suscipit orci eos, tellus dui congue iaculis, sed in ut dolor a at venenatis. Ligula pede pretium nulla ipsum, amet in pede molestie, massa sit ipsum vel, augue at sit eleifend ultricies wisi, ipsum consectetuer. In maecenas, rutrum 
-	</div>
-
-	<a href="#/basicInfo" class="btn btn-default">NEXT</a>
 </section>

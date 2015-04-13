@@ -2,18 +2,19 @@
 	<div class="">
 		<a href="" ng-click="toggleLoginModal()">Login</a>
 		<modal title="Login form" visible="showLoginModal">
-		    <form role="form" name="loginForm" novalidate>
+
+		      	<div class="form-group"><form role="form" name="loginForm" novalidate>
 		    	<div class="form-group">
-		    			        <label for="email">Email address</label>
-		    			        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" ng-model="user.email">
-		    					<p ng-show="loginForm.email.$invalid && loginForm.email.$touched">Must be a valid email</p>
-		    					<br><br>
+			        <label for="email">Email address</label>
+			        <input type="email" class="form-control has-warning" name="email" id="email" placeholder="Enter Email" ng-model="user.email">
+					<p ng-show="loginForm.email.$invalid && loginForm.email.$touched" class="text-danger">Must be a valid email</p>
+					<br><br>
 		      	</div>
-		      	<div class="form-group">
-		    			        <label for="password">Password</label>
-		    			        <input type="password" class="form-control" name="password" id="password" placeholder="Password" ng-model="user.password" />
+			        <label for="password">Password</label>
+			        <input type="password" class="form-control" name="password" id="password" placeholder="Password" ng-model="user.password" />
 		      	</div>
 		        <button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid" ng-click="login(user)">Submit</button>
+		        <span ng-show="errorMsg" class="text-danger">Username and password don't match</span>
 		    </form>
 		</modal>
 

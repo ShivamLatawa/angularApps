@@ -13,5 +13,6 @@ sme.factory('Authentication',function  ($firebase,$firebaseAuth,FIREBASE_URL) {
       });
   	}
     }//login
-	return myObject;
+
+    return myObject;
 });
